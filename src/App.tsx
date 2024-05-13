@@ -3,7 +3,7 @@ import Produtos from './containers/Produtos'
 
 import { GlobalStyle } from './styles'
 import { Provider } from 'react-redux'
-import { store } from './store'
+import { configuraStore } from './store'
 
 export type Game = {
   id: number
@@ -14,6 +14,8 @@ export type Game = {
   categoria: string
   imagem: string
 }
+
+const store = configuraStore()
 
 function App() {
   return (
